@@ -19,7 +19,6 @@
 * [Netlists](#Netlists)
 * [NgSpice Plots](#NgSpice-Plots)
 * [Steps to run and generate NgVeri Model](#Steps-to-run-and-generate-NgVeri-Model)
-* [Steps to run this project](#Steps-to-run-this-project)
 * [Author](#Author)
 * [Acknowledgements](#Acknowledgements)
 * [References](#References)
@@ -270,9 +269,6 @@ Here, sine wave is taken as input voltage with amplitude 6V and frequency 20MHz.
 6. Click on Run Verilog to NgSpice Converter
 7. Debug if any errors
 8. Model created successfully
-# Steps to run this project
-
-
 # Author
 Swagatika Meher, M.Tech (ECE), Odisha University of Technology and Research, Bhubaneswar, Odisha, India, 751029
 # Acknowledgements
