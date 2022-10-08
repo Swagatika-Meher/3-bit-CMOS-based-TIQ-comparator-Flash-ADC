@@ -1,0 +1,56 @@
+* E:\eSim\ADC\ADC.cir
+
+* EESchema Netlist Version 1.1 (Spice format) creation date: 10/08/22 00:25:55
+
+* To exclude a component from the Spice Netlist add [Spice_Netlist_Enabled] user FIELD set to: N
+* To reorder the component spice node sequence add [Spice_Node_Sequence] user FIELD and define sequence: 2,1,0
+
+* Sheet Name: /
+SC1  Net-_SC1-Pad1_ Vin Vref Vref sky130_fd_pr__pfet_01v8		
+SC15  TIQ1 Net-_SC1-Pad1_ Vref Vref sky130_fd_pr__pfet_01v8		
+SC2  Net-_SC1-Pad1_ Vin GND GND sky130_fd_pr__nfet_01v8		
+SC3  Net-_SC17-Pad2_ Vin Vref Vref sky130_fd_pr__pfet_01v8		
+SC17  TIQ2 Net-_SC17-Pad2_ Vref Vref sky130_fd_pr__pfet_01v8		
+SC4  Net-_SC17-Pad2_ Vin GND GND sky130_fd_pr__nfet_01v8		
+SC18  TIQ2 Net-_SC17-Pad2_ GND GND sky130_fd_pr__nfet_01v8		
+SC5  Net-_SC19-Pad2_ Vin Vref Vref sky130_fd_pr__pfet_01v8		
+SC19  TIQ3 Net-_SC19-Pad2_ Vref Vref sky130_fd_pr__pfet_01v8		
+SC7  Net-_SC21-Pad2_ Vin Vref Vref sky130_fd_pr__pfet_01v8		
+SC21  TIQ4 Net-_SC21-Pad2_ Vref Vref sky130_fd_pr__pfet_01v8		
+SC6  Net-_SC19-Pad2_ Vin GND GND sky130_fd_pr__nfet_01v8		
+SC20  TIQ3 Net-_SC19-Pad2_ GND GND sky130_fd_pr__nfet_01v8		
+SC8  Net-_SC21-Pad2_ Vin GND GND sky130_fd_pr__nfet_01v8		
+SC22  TIQ4 Net-_SC21-Pad2_ GND GND sky130_fd_pr__nfet_01v8		
+SC9  Net-_SC10-Pad1_ Vin Vref Vref sky130_fd_pr__pfet_01v8		
+SC23  TIQ5 Net-_SC10-Pad1_ Vref Vref sky130_fd_pr__pfet_01v8		
+SC10  Net-_SC10-Pad1_ Vin GND GND sky130_fd_pr__nfet_01v8		
+SC24  TIQ5 Net-_SC10-Pad1_ GND GND sky130_fd_pr__nfet_01v8		
+SC11  Net-_SC11-Pad1_ Vin Vref Vref sky130_fd_pr__pfet_01v8		
+SC25  TIQ6 Net-_SC11-Pad1_ Vref Vref sky130_fd_pr__pfet_01v8		
+SC12  Net-_SC11-Pad1_ Vin GND GND sky130_fd_pr__nfet_01v8		
+SC26  TIQ6 Net-_SC11-Pad1_ GND GND sky130_fd_pr__nfet_01v8		
+SC13  Net-_SC13-Pad1_ Vin Vref Vref sky130_fd_pr__pfet_01v8		
+SC27  TIQ7 Net-_SC13-Pad1_ Vref Vref sky130_fd_pr__pfet_01v8		
+SC14  Net-_SC13-Pad1_ Vin GND GND sky130_fd_pr__nfet_01v8		
+SC28  TIQ7 Net-_SC13-Pad1_ GND GND sky130_fd_pr__nfet_01v8		
+SC16  TIQ1 Net-_SC1-Pad1_ GND GND sky130_fd_pr__nfet_01v8		
+Vin1  Vin GND sine		
+v2  Vref GND DC		
+U2  Vref plot_v1		
+scmode1  SKY130mode		
+U7  Net-_U6-Pad9_ Net-_U6-Pad10_ Net-_U6-Pad11_ Y2 Y1 Y0 dac_bridge_3		
+U8  Y2 plot_v1		
+U9  Y1 plot_v1		
+U10  Y0 plot_v1		
+U3  TIQ1 TIQ2 TIQ3 TIQ4 TIQ5 TIQ6 TIQ7 GND Net-_U3-Pad9_ Net-_U3-Pad10_ Net-_U3-Pad11_ Net-_U3-Pad12_ Net-_U3-Pad13_ Net-_U3-Pad14_ Net-_U3-Pad15_ Net-_U3-Pad16_ adc_bridge_8		
+U5  TIQ1 plot_v1		
+U12  TIQ2 plot_v1		
+U15  TIQ3 plot_v1		
+U4  TIQ4 plot_v1		
+U11  TIQ5 plot_v1		
+U13  TIQ6 plot_v1		
+U14  TIQ7 plot_v1		
+U1  Vin plot_v1		
+U6  Net-_U3-Pad9_ Net-_U3-Pad10_ Net-_U3-Pad11_ Net-_U3-Pad12_ Net-_U3-Pad13_ Net-_U3-Pad14_ Net-_U3-Pad15_ Net-_U3-Pad16_ Net-_U6-Pad9_ Net-_U6-Pad10_ Net-_U6-Pad11_ swagatika_8to3_mux_based_priorityencoder		
+
+.end
