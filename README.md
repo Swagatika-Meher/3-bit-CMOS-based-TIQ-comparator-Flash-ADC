@@ -7,10 +7,10 @@
 * Truth Table
 * Designing Steps
 * Software Used
-* * eSim
-* * NgSpice
-* * Makerchip
-* * Verilator
+  * eSim
+  * NgSpice
+  * Makerchip
+  * Verilator
 * Verilog Code
 * Makerchip
 * Makerchip Plots
@@ -20,6 +20,7 @@
 * NgSpice Plots
 * Steps to run and generate NgVeri Model
 * Steps to run this project
+* Author
 * Acknowledgements
 * References
 # Abstract
@@ -63,6 +64,225 @@ It is an Online Web Browser IDE for Verilog/System-verilog/TL-Verilog Simulation
 
 It is a tool which converts Verilog code to C++ objects. For more details refer: [https://www.veripool.org/verilator/](https://www.veripool.org/verilator/)
 # Verilog Code
+
+```
+////////////////////////////////////////////////////////////////////////
+// Mixed Signal Design Hackathon
+//
+// (Organised by FOSSEE IIT Bombay, VSD Corp. Pvt. Ltd.)
+//
+// Design Name:        8:3 Mux based Encoder
+// Designer:           Swagatika Meher
+// Module Name:        Swagatika_8to3_mux_based_priorityencoder
+//
+///////////////////////////////////////////////////////////////////////
+
+// Enter the code here
+
+module Swagatika_8to3_mux_based_priorityencoder(in,O);
+  
+  input [7:0]in;
+  output reg [2:0]O;
+  
+assign O = (in[7] ==1'b1 ) ? 3'b111:
+               (in[6] ==1'b1 ) ? 3'b110:
+               (in[5] ==1'b1 ) ? 3'b101:
+               (in[4] ==1'b1) ? 3'b100:
+               (in[3] ==1'b1) ? 3'b011:
+               (in[2] ==1'b1) ? 3'b010:
+               (in[1] ==1'b1) ? 3'b001:
+               (in[0] ==1'b1) ? 3'b000: 3'bxxx;
+
+endmodule
+```
+# Makerchip
+
+```
+\TLV_version 1d: tl-x.org
+\SV
+/* verilator lint_off UNUSED*/  /* verilator lint_off DECLFILENAME*/  /* verilator lint_off BLKSEQ*/  /* verilator lint_off WIDTH*/  /* verilator lint_off SELRANGE*/  /* verilator lint_off PINCONNECTEMPTY*/  /* verilator lint_off DEFPARAM*/  /* verilator lint_off IMPLICIT*/  /* verilator lint_off COMBDLY*/  /* verilator lint_off SYNCASYNCNET*/  /* verilator lint_off UNOPTFLAT */  /* verilator lint_off UNSIGNED*/  /* verilator lint_off CASEINCOMPLETE*/  /* verilator lint_off UNDRIVEN*/  /* verilator lint_off VARHIDDEN*/  /* verilator lint_off CASEX*/  /* verilator lint_off CASEOVERLAP*/  /* verilator lint_off PINMISSING*/  /* verilator lint_off BLKANDNBLK*/  /* verilator lint_off MULTIDRIVEN*/  /* verilator lint_off WIDTHCONCAT*/  /* verilator lint_off ASSIGNDLY*/  /* verilator lint_off MODDUP*/  /* verilator lint_off STMTDLY*/  /* verilator lint_off LITENDIAN*/  /* verilator lint_off INITIALDLY*/  
+
+//Your Verilog/System Verilog Code Starts Here:
+////////////////////////////////////////////////////////////////////////
+// Mixed Signal Design Hackathon
+//
+// (Organised by FOSSEE IIT Bombay, VSD Corp. Pvt. Ltd.)
+//
+// Design Name:        8:3 Mux based Encoder
+// Designer:           Swagatika Meher
+// Module Name:        Swagatika_8to3_mux_based_priorityencoder
+//
+///////////////////////////////////////////////////////////////////////
+
+// Enter the code here
+
+module Swagatika_8to3_mux_based_priorityencoder(in,O);
+  
+  input [7:0]in;
+  output reg [2:0]O;
+  
+assign O = (in[7] ==1'b1 ) ? 3'b111:
+               (in[6] ==1'b1 ) ? 3'b110:
+               (in[5] ==1'b1 ) ? 3'b101:
+               (in[4] ==1'b1) ? 3'b100:
+               (in[3] ==1'b1) ? 3'b011:
+               (in[2] ==1'b1) ? 3'b010:
+               (in[1] ==1'b1) ? 3'b001:
+               (in[0] ==1'b1) ? 3'b000: 3'bxxx;
+
+endmodule
+
+//Top Module Code Starts here:
+	module top(input logic clk, input logic reset, input logic [31:0] cyc_cnt, output logic passed, output logic failed);
+		logic  [7:0] in;//input
+		logic  [2:0] O;//output
+//The $random() can be replaced if user wants to assign values
+		assign in = $random();
+		Swagatika_8to3_mux_based_priorityencoder Swagatika_8to3_mux_based_priorityencoder(.in(in), .O(O));
+	
+\TLV
+//Add \TLV here if desired                                     
+\SV
+endmodule
+```
+# Makerchip Plots
+The waveforms for different inputs given to 8:3 priority encoder & their respective outputs :
+
+![Encoder](https://user-images.githubusercontent.com/114692581/194708805-069f7fb7-5d40-4016-b859-a8d43d690b1e.PNG)
+
+# Generating Model for 8:3 Priority Encoder using NgVeri
+To encode the thermometric code into binary code, digital logic of 8:3 priority encoder is created using verilog code in NgVeri simulator.
+
+![Model](https://user-images.githubusercontent.com/114692581/194709369-957c0425-831e-41aa-85d8-a2fac267025d.PNG)
+
+# Circuit Diagram in eSim
+The following is the schematic in eSim simulator.
+
+![Sch1](https://user-images.githubusercontent.com/114692581/194710243-f9ccb0e7-a9d9-4303-b07d-b450b23c94b2.PNG)
+
+
+![sch2](https://user-images.githubusercontent.com/114692581/194710247-ea507ad5-56b7-41dd-9f15-1f89c0df53f1.PNG)
+
+
+![sch3](https://user-images.githubusercontent.com/114692581/194710263-48b2036b-cc2a-4b53-a2b5-b417f06ca597.PNG)
+
+
+![sch4](https://user-images.githubusercontent.com/114692581/194710283-9b59d4a4-5315-4509-b5e3-8f672a98c612.PNG)
+
+As we can see, 7 TIQ comparators are connected in parallel manner. From all the TIQ components, first inverters are acting as comparators and second inverters are acting as gain boosters. In the next stage, the outputs of TIQ comparators are passing through ADC bridge to convert the analog voltages to digital form that is, 0s and 1s. Then, the 8:3 priority encoder is used to generate 3 bit binary output for the input with highest priority.
+# Netlists
+```
+* e:\esim\adc\adc.cir
+
+.include "C:\FOSSEE\eSim\library\sky130_fd_pr\models\sky130_fd_pr__model__r+c.model.spice"
+.include "C:\FOSSEE\eSim\library\sky130_fd_pr\models\sky130_fd_pr__model__inductors.model.spice"
+.include "C:\FOSSEE\eSim\library\sky130_fd_pr\models\sky130_fd_pr__model__diode_pw2nd_11v0.model.spice"
+.include "C:\FOSSEE\eSim\library\sky130_fd_pr\models\sky130_fd_pr__model__pnp.model.spice"
+.include "C:\FOSSEE\eSim\library\sky130_fd_pr\models\sky130_fd_pr__model__diode_pd2nw_11v0.model.spice"
+.lib "C:\FOSSEE\eSim\library\sky130_fd_pr\models\sky130.lib.spice" tt
+.include "C:\FOSSEE\eSim\library\sky130_fd_pr\models\sky130_fd_pr__model__linear.model.spice"
+xsc1 net-_sc1-pad1_ vin vref vref sky130_fd_pr__pfet_01v8 M=1 W=0.5 L=10
+xsc15 tiq1 net-_sc1-pad1_ vref vref sky130_fd_pr__pfet_01v8 
+xsc2 net-_sc1-pad1_ vin gnd gnd sky130_fd_pr__nfet_01v8 W=20 L=0.3
+xsc3 net-_sc17-pad2_ vin vref vref sky130_fd_pr__pfet_01v8 W=0.5 L=1
+xsc17 tiq2 net-_sc17-pad2_ vref vref sky130_fd_pr__pfet_01v8 
+xsc4 net-_sc17-pad2_ vin gnd gnd sky130_fd_pr__nfet_01v8 W=12 L=0.3
+xsc18 tiq2 net-_sc17-pad2_ gnd gnd sky130_fd_pr__nfet_01v8 
+xsc5 net-_sc19-pad2_ vin vref vref sky130_fd_pr__pfet_01v8 W=0.42 L=0.18
+xsc19 tiq3 net-_sc19-pad2_ vref vref sky130_fd_pr__pfet_01v8 
+xsc7 net-_sc21-pad2_ vin vref vref sky130_fd_pr__pfet_01v8 W=2 L=0.18
+xsc21 tiq4 net-_sc21-pad2_ vref vref sky130_fd_pr__pfet_01v8 
+xsc6 net-_sc19-pad2_ vin gnd gnd sky130_fd_pr__nfet_01v8 W=1 L=0.18
+xsc20 tiq3 net-_sc19-pad2_ gnd gnd sky130_fd_pr__nfet_01v8 
+xsc8 net-_sc21-pad2_ vin gnd gnd sky130_fd_pr__nfet_01v8 W=0.42 L=0.18
+xsc22 tiq4 net-_sc21-pad2_ gnd gnd sky130_fd_pr__nfet_01v8 
+xsc9 net-_sc10-pad1_ vin vref vref sky130_fd_pr__pfet_01v8 W=3 L=0.18
+xsc23 tiq5 net-_sc10-pad1_ vref vref sky130_fd_pr__pfet_01v8 
+xsc10 net-_sc10-pad1_ vin gnd gnd sky130_fd_pr__nfet_01v8 W=0.42 L=1
+xsc24 tiq5 net-_sc10-pad1_ gnd gnd sky130_fd_pr__nfet_01v8 
+xsc11 net-_sc11-pad1_ vin vref vref sky130_fd_pr__pfet_01v8 W=15 L=0.18
+xsc25 tiq6 net-_sc11-pad1_ vref vref sky130_fd_pr__pfet_01v8 
+xsc12 net-_sc11-pad1_ vin gnd gnd sky130_fd_pr__nfet_01v8 W=0.42 L=10
+xsc26 tiq6 net-_sc11-pad1_ gnd gnd sky130_fd_pr__nfet_01v8 
+xsc13 net-_sc13-pad1_ vin vref vref sky130_fd_pr__pfet_01v8 W=30 L=0.18
+xsc27 tiq7 net-_sc13-pad1_ vref vref sky130_fd_pr__pfet_01v8 
+xsc14 net-_sc13-pad1_ vin gnd gnd sky130_fd_pr__nfet_01v8 W=0.42 L=20
+xsc28 tiq7 net-_sc13-pad1_ gnd gnd sky130_fd_pr__nfet_01v8 
+xsc16 tiq1 net-_sc1-pad1_ gnd gnd sky130_fd_pr__nfet_01v8 
+vin1  vin gnd sine(0 6 20M 1n 0)
+v2 vref gnd  dc 6
+* u2  vref plot_v1
+* s c m o d e
+* u7  net-_u6-pad9_ net-_u6-pad10_ net-_u6-pad11_ y2 y1 y0 dac_bridge_3
+* u8  y2 plot_v1
+* u9  y1 plot_v1
+* u10  y0 plot_v1
+* u3  tiq1 tiq2 tiq3 tiq4 tiq5 tiq6 tiq7 gnd net-_u3-pad9_ net-_u3-pad10_ net-_u3-pad11_ net-_u3-pad12_ net-_u3-pad13_ net-_u3-pad14_ net-_u3-pad15_ net-_u3-pad16_ adc_bridge_8
+* u5  tiq1 plot_v1
+* u12  tiq2 plot_v1
+* u15  tiq3 plot_v1
+* u4  tiq4 plot_v1
+* u11  tiq5 plot_v1
+* u13  tiq6 plot_v1
+* u14  tiq7 plot_v1
+* u1  vin plot_v1
+* u6  net-_u3-pad9_ net-_u3-pad10_ net-_u3-pad11_ net-_u3-pad12_ net-_u3-pad13_ net-_u3-pad14_ net-_u3-pad15_ net-_u3-pad16_ net-_u6-pad9_ net-_u6-pad10_ net-_u6-pad11_ swagatika_8to3_mux_based_priorityencoder
+a1 [net-_u6-pad9_ net-_u6-pad10_ net-_u6-pad11_ ] [y2 y1 y0 ] u7
+a2 [tiq1 tiq2 tiq3 tiq4 tiq5 tiq6 tiq7 gnd ] [net-_u3-pad9_ net-_u3-pad10_ net-_u3-pad11_ net-_u3-pad12_ net-_u3-pad13_ net-_u3-pad14_ net-_u3-pad15_ net-_u3-pad16_ ] u3
+a3 [net-_u3-pad9_ net-_u3-pad10_ net-_u3-pad11_ net-_u3-pad12_ net-_u3-pad13_ net-_u3-pad14_ net-_u3-pad15_ net-_u3-pad16_ ] [net-_u6-pad9_ net-_u6-pad10_ net-_u6-pad11_ ] u6
+* Schematic Name:                             dac_bridge_3, NgSpice Name: dac_bridge
+.model u7 dac_bridge(out_low=0 out_high=5 out_undef=5 input_load=1p t_rise=1n t_fall=1n ) 
+* Schematic Name:                             adc_bridge_8, NgSpice Name: adc_bridge
+.model u3 adc_bridge(in_low=1.0 in_high=2.0 rise_delay=1.0e-9 fall_delay=1.0e-9 ) 
+* Schematic Name:                             swagatika_8to3_mux_based_priorityencoder, NgSpice Name: swagatika_8to3_mux_based_priorityencoder
+.model u6 swagatika_8to3_mux_based_priorityencoder(rise_delay=1.0e-9 fall_delay=1.0e-9 input_load=1.0e-12 instance_id=1 ) 
+.tran 0.001e-00 14e-00 0e-00
+
+* Control Statements 
+.control
+run
+print allv > plot_data_v.txt
+print alli > plot_data_i.txt
+plot v(vin) v(tiq1) v(tiq2) v(tiq3) v(tiq4) v(tiq5) v(tiq6) v(tiq7)    
+plot v(vref)
+plot v(y2)+8 v(y1)+16 v(y0)
+.endc
+.end
+```
+# NgSpice Plots
+Here, sine wave is taken as input voltage with amplitude 6V and frequency 20MHz. Reference voltage is also taken as 6V. Reference voltages of each comparators are varying with respect to width of PMOS. We know that, the output is high if reference voltage is less than input voltage and the output is low, if reference voltage is greater than input voltage. We can see in the output plots, from 0sec to 1sec the output bits are low and after that all the digital output bits are high. 
+
+![p1](https://user-images.githubusercontent.com/114692581/194712499-ae960d9c-3d2c-4a51-81c4-05b40ad427f4.PNG)
+
+
+![P2](https://user-images.githubusercontent.com/114692581/194712517-1fbcba98-826f-4507-b0c4-7524cbff8682.PNG)
+
+
+![p3](https://user-images.githubusercontent.com/114692581/194712541-467eb305-ece9-4dee-826b-6f85ac91d12f.PNG)
+
+# Steps to run and generate NgVeri Model
+1. Open eSim
+2. Run NgVeri-Makerchip
+3. Add top level verilog file in Makerchip Tab [Keep module name same as file name]
+4. Click on NgVeri tab
+5. Add dependency files
+6. Click on Run Verilog to NgSpice Converter
+7. Debug if any errors
+8. Model created successfully
+# Steps to run this project
+
+
+# Author
+Swagatika Meher, M.Tech (ECE), Odisha University of Technology and Research, Bhubaneswar, Odisha, India, 751029
+# Acknowledgements
+1. FOSSEE, IIT Bombay
+2. Steve Hoover, Founder, Redwood EDA
+3. Kunal Ghosh, Co-founder, VSD Corp. Pvt. Ltd. - kunalpghosh@gmail.com
+4. Sumanto Kar, eSim Team, FOSSEE
+* References
+ 
+
+      
 
 
 
