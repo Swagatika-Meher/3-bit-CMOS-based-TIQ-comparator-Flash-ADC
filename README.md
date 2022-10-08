@@ -81,7 +81,7 @@ It is a tool which converts Verilog code to C++ objects. For more details refer:
 module Swagatika_8to3_mux_based_priorityencoder(in,O);
   
   input [7:0]in;
-  output reg [2:0]O;
+  output [2:0]O;
   
 assign O = (in[7] ==1'b1 ) ? 3'b111:
                (in[6] ==1'b1 ) ? 3'b110:
@@ -118,7 +118,7 @@ endmodule
 module Swagatika_8to3_mux_based_priorityencoder(in,O);
   
   input [7:0]in;
-  output reg [2:0]O;
+  output [2:0]O;
   
 assign O = (in[7] ==1'b1 ) ? 3'b111:
                (in[6] ==1'b1 ) ? 3'b110:
