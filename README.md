@@ -245,12 +245,12 @@ print allv > plot_data_v.txt
 print alli > plot_data_i.txt
 plot v(vin) v(tiq1) v(tiq2) v(tiq3) v(tiq4) v(tiq5) v(tiq6) v(tiq7)    
 plot v(vref)
-plot v(y2)+8 v(y1)+16 v(y0)
+plot v(y2)+16 v(y1)+8 v(y0)
 .endc
 .end
 ```
 # NgSpice Plots
-Here, sine wave is taken as input voltage with amplitude 6V and frequency 20MHz. Reference voltage is also taken as 6V. Reference voltages of each comparators are varying with respect to width of PMOS. We know that, the output is high if reference voltage is less than input voltage and the output is low, if reference voltage is greater than input voltage. We can see in the output plots, from 0sec to 1sec the output bits are low and after that all the digital output bits are high. 
+Here, sine wave is taken as input voltage with amplitude 6V and frequency 20MHz. Reference voltage is also taken as 6V. Reference voltages of each comparator are varying with respect to width of PMOS. We know that, the output is high if reference voltage is less than input voltage and the output is low, if reference voltage is greater than input voltage. We can see in the output plots, from 0sec to 1sec the output bits are low and after that all the digital output bits are high. 
 
 ![p1](https://user-images.githubusercontent.com/114692581/194712499-ae960d9c-3d2c-4a51-81c4-05b40ad427f4.PNG)
 
@@ -258,7 +258,8 @@ Here, sine wave is taken as input voltage with amplitude 6V and frequency 20MHz.
 ![P2](https://user-images.githubusercontent.com/114692581/194712517-1fbcba98-826f-4507-b0c4-7524cbff8682.PNG)
 
 
-![p3](https://user-images.githubusercontent.com/114692581/194712541-467eb305-ece9-4dee-826b-6f85ac91d12f.PNG)
+![p3](https://user-images.githubusercontent.com/114692581/194717301-bfd01c5f-b994-498e-b36e-8a7af0b3d77e.PNG)
+
 
 # Steps to run and generate NgVeri Model
 1. Open eSim
