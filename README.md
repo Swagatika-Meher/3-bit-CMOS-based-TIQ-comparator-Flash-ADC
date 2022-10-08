@@ -275,15 +275,15 @@ Here, sine wave is taken as input voltage with amplitude 6V and frequency 20MHz.
 # Author
 Swagatika Meher, M.Tech (ECE), Odisha University of Technology and Research, Bhubaneswar, Odisha, India, 751029
 # Acknowledgements
-1. FOSSEE, IIT Bombay
+1. FOSSEE, IIT Bombay  
+   [http://iitb.ac.in/](http://iitb.ac.in/), [https://fossee.in/](https://fossee.in/)
 2. Steve Hoover, Founder, Redwood EDA
-3. Kunal Ghosh, Co-founder, VSD Corp. Pvt. Ltd. - kunalpghosh@gmail.com
-4. Sumanto Kar, eSim Team, FOSSEE
-* References
- 
-
-      
-
-
-
-
+3. Kunal Ghosh, Co-founder, VSD Corp. Pvt. Ltd. - [kunalpghosh@gmail.com](kunalpghosh@gmail.com)
+4. Sumanto Kar, eSim Team, FOSSEE, IIT Bombay
+5. VLSI System Design - [https://www.vlsisystemdesign.com/](https://www.vlsisystemdesign.com/)
+6. Spoken Tutorial - [https://spoken-tutorial.org/](https://spoken-tutorial.org/)
+7. Ministry of Electronics & Information Technology (MeitY) Chips to Startup (C2S) - [https://www.c2s.gov.in/](https://www.c2s.gov.in/)
+8. Google - [https://www.google.co.in/](https://www.google.co.in/)
+# References
+1. Moyal, Vishal, and Neeta Tripathi. "Adiabatic threshold inverter quantizer for a 3-bit flash ADC." 2016 International Conference on Wireless Communications, Signal Processing and Networking (WiSPNET). IEEE, 2016. - [https://doi.org/10.1109/WiSPNET.2016.7566395](https://doi.org/10.1109/WiSPNET.2016.7566395)
+2. Sireesha, Ranam, and Abhishek Kumar. "Design of low power 0.8 V Flash ADC using TIQ in 90nm technology." 2015 International Conference on Smart Technologies and Management for Computing, Communication, Controls, Energy and Materials (ICSTM). IEEE, 2015. - [https://doi.org/10.1109/ICSTM.2015.7225451](https://doi.org/10.1109/ICSTM.2015.7225451)
