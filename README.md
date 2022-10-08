@@ -1,28 +1,28 @@
 # # Mixed Signal Circuit Design and Simulation Marathon
 # 3-bit CMOS based TIQ comparator Flash ADC
-* Abstract
-* Reference Circuit Diagram
-* Circuit Details
-* TIQ Comparator
-* Truth Table
-* Designing Steps
-* Software Used
+* [Abstract](#Abstract)
+* [Reference Circuit Diagram](#Reference-Circuit-Diagram)
+* [Circuit Details](#Circuit-Details)
+* [TIQ Comparator](#TIQ-Comparator)
+* [Truth Table](#Truth-Table)
+* [Designing Steps](#Designing-Steps)
+* [Software Used](#Software-Used)
   * eSim
   * NgSpice
   * Makerchip
   * Verilator
-* Verilog Code
-* Makerchip
-* Makerchip Plots
-* Generating Model for 8:3 Priority Encoder using NgVeri
-* Circuit Diagram in eSim
-* Netlists
-* NgSpice Plots
-* Steps to run and generate NgVeri Model
-* Steps to run this project
-* Author
-* Acknowledgements
-* References
+* [Verilog Code](#Verilog-Code)
+* [Makerchip](#Makerchip)
+* [Makerchip Plots](#Makerchip-Plots)
+* [Generating Model for 8 to 3 Priority Encoder using NgVeri](#Generating-Model-for-8-to-3-Priority-Encoder-using-NgVeri)
+* [Circuit Diagram in eSim](#Circuit-Diagram-in-eSim)
+* [Netlists](#Netlists)
+* [NgSpice Plots](#NgSpice-Plots)
+* [Steps to run and generate NgVeri Model](#Steps-to-run-and-generate-NgVeri-Model)
+* [Steps to run this project](#Steps-to-run-this-project)
+* [Author](#Author)
+* [Acknowledgements](#Acknowledgements)
+* [References](#References)
 # Abstract
 This design describes a 3-bit high-speed and low-power Flash Analog to Digital Converter. The conventional Flash ADC contains the resistor ladder network, comparator, and encoder. Power consumption is higher in typical Flash ADCs since resistor ladder networks are used. The Threshold Inverter Quantization (TIQ) comparator and mux-based encoding technique has been employed in 3-bit Flash ADC to get over this problem and speed up the conversion rate. These designs increase speed and reduce power consumption by employing simply a series of inverters and multiplexers.
 # Reference Circuit Diagram
@@ -150,7 +150,7 @@ The waveforms for different inputs given to 8:3 priority encoder & their respect
 
 ![Encoder](https://user-images.githubusercontent.com/114692581/194708805-069f7fb7-5d40-4016-b859-a8d43d690b1e.PNG)
 
-# Generating Model for 8:3 Priority Encoder using NgVeri
+# Generating Model for 8 to 3 Priority Encoder using NgVeri
 To encode the thermometric code into binary code, digital logic of 8:3 priority encoder is created using verilog code in NgVeri simulator.
 
 ![Model](https://user-images.githubusercontent.com/114692581/194709369-957c0425-831e-41aa-85d8-a2fac267025d.PNG)
