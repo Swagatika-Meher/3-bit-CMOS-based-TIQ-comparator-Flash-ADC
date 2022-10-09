@@ -260,6 +260,11 @@ Here, sine wave is taken as input voltage with amplitude 6V and frequency 20MHz.
 ![p3](https://user-images.githubusercontent.com/114692581/194717301-bfd01c5f-b994-498e-b36e-8a7af0b3d77e.PNG)
 
 
+![r1](https://user-images.githubusercontent.com/114692581/194745729-84e92afc-8948-41e0-992d-cc2a848f19e2.PNG)
+
+
+![r2](https://user-images.githubusercontent.com/114692581/194745740-9986585d-326e-40d4-8d79-04405b505ee2.PNG)
+
 # Steps to run and generate NgVeri Model
 1. Open eSim
 2. Run NgVeri-Makerchip
